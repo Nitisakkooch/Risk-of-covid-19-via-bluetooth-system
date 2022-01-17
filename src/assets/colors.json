@@ -1,0 +1,11 @@
+{
+    "primary": "#22419B",
+    "text": "#222",
+    "textInverse": "#fff",
+    "card": "#fff",
+    "cardInverse": "#333",
+    "background": "#f2f2f2",
+    "backgroundInverse": "#000",
+    "warn": "#E6D71C",
+    "danger": "#E65E1C"
+}
