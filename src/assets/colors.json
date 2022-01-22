@@ -1,8 +1,8 @@
 {
-    "primary": "#22419B",
-    "text": "#222",
+    "primary": "#2F80ED",
+    "text": "#000000",
     "textInverse": "#fff",
-    "card": "#fff",
+    "card": "#E0E0E0",
     "cardInverse": "#333",
     "background": "#f2f2f2",
     "backgroundInverse": "#000",

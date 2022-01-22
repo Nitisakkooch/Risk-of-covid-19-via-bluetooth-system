@@ -8,22 +8,50 @@ import {
   Link,
   Router
 } from "react-router-dom";
-import Overview from './pages/Overview';
-
+import styled from 'styled-components';
+import ComponentTable from './pages/ComponentTable';
+import { RiVirusLine } from 'react-icons/ri';
+const Order = styled.div`
+    display: flex;
+    justify-content: space-between
+    width: 100vw;
+    height: 800vh;
+`;
+const Nav = styled.div`
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 4rem;
+    background-color: #E5E5E5;
+`;
+const BarIcon = styled.div`
+    margin-top: auto;
+    align-items: center;
+    font-size: 2rem;
+    color: #418FDE;
+    font-size: 3rem;
+`;
 const App: FC = () => {
   return (
     <>
-      <BrowserRouter>
-        <Sidebar />
-      </BrowserRouter>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/overview" element={<Overview />} />
-        </Routes>
-      </BrowserRouter>
+      <Nav>
+        <BarIcon >
+          <RiVirusLine />
+        </BarIcon>
+        System for tracking people at risk of Covid-19
+      </Nav>
+      <Order>
+        <BrowserRouter>
+          <Sidebar />
+        </BrowserRouter>
+        <BrowserRouter>
+          <Routes >
+            <Route path="/overview" element={<ComponentTable />} />
+          </Routes>
+        </BrowserRouter>
+      </Order>
+
     </>
-
-
   );
 }
 

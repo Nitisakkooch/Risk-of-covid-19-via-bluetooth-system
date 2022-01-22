@@ -1,11 +1,11 @@
 import { FC } from "react";
+import ComponentTable from "./ComponentTable";
 
 const Overview: FC = () => {
     return <>
     <div>
-        TEst
+        <ComponentTable/>
     </div>
-        Hello Overview
     </>;
 };
 export default Overview;

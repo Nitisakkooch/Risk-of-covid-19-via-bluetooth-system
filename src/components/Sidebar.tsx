@@ -1,5 +1,4 @@
-
-import React, { FC } from "react";
+import React, { createContext, FC } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { IconContext } from "react-icons";
@@ -7,14 +6,6 @@ import { AiFillHome } from "react-icons/ai"
 import { RiVirusLine } from "react-icons/ri"
 import { BsCardChecklist } from "react-icons/bs"
 import { useState } from "react";
-
-const Nav = styled.div`
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    height: 4rem;
-    background-color: #E5E5E5;
-`;
 
 const SidebarNav = styled.div`
     display: flex;
@@ -37,9 +28,7 @@ const NavIcon = styled(Link)`
     text-align: center;
     font-size: 2rem;
 `;
-const SidebarWrap = styled.div`
 
-`;
 const Sidebar: FC = () => {
     const [sidebar, setSidebar] = useState(false);
     const showSidebar = () => setSidebar(!sidebar);
@@ -47,12 +36,6 @@ const Sidebar: FC = () => {
     return (
         <>
             <IconContext.Provider value={{ color: "#418FDE" }}>
-                <Nav>
-                    <BarIcon >
-                        <RiVirusLine />
-                    </BarIcon>
-                    System for tracking people at risk of Covid-19
-                </Nav>
             </IconContext.Provider>
             <IconContext.Provider value={{ color: "#fff" }}>
                 <SidebarNav>
@@ -61,15 +44,8 @@ const Sidebar: FC = () => {
                             <AiFillHome />
                         </NavIcon>
                     </div>
-                    <div>
-                        {/* <NavIcon to="#" >
-                            <BsCardChecklist />
-                        </NavIcon> */}
-                    </div>
-
                 </SidebarNav>
             </IconContext.Provider>
-
         </>
     );
 };
