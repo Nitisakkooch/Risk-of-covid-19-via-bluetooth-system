@@ -11,11 +11,13 @@ import {
 import styled from 'styled-components';
 import ComponentTable from './pages/ComponentTable';
 import { RiVirusLine } from 'react-icons/ri';
+
+
 const Order = styled.div`
     display: flex;
     justify-content: space-between
-    width: 100vw;
-    height: 800vh;
+    width: 1000vw;
+    height: 80vh;
 `;
 const Nav = styled.div`
     display: flex;
@@ -32,6 +34,7 @@ const BarIcon = styled.div`
     font-size: 3rem;
 `;
 const App: FC = () => {
+  
   return (
     <>
       <Nav>
@@ -42,7 +45,7 @@ const App: FC = () => {
       </Nav>
       <Order>
         <BrowserRouter>
-          <Sidebar />
+          <Sidebar/>
         </BrowserRouter>
         <BrowserRouter>
           <Routes >
@@ -50,7 +53,6 @@ const App: FC = () => {
           </Routes>
         </BrowserRouter>
       </Order>
-
     </>
   );
 }

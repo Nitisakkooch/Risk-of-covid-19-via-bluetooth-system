@@ -3,24 +3,32 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { IconContext } from "react-icons";
 import { AiFillHome } from "react-icons/ai"
-import { RiVirusLine } from "react-icons/ri"
-import { BsCardChecklist } from "react-icons/bs"
 import { useState } from "react";
+import * as colors from "../assets/colors.json";
 
 const SidebarNav = styled.div`
+    border-radius: 0;
     display: flex;
-    justify-content: center;
-    height: 730px;
-    width: 22vh;
-    background-color: #02061D;
+    flex-direction: column;
+    width: 256px;
+    height: 1195px;
+    overflow-x: hidden;
+    @media (max-width: 768px) {
+    width: 0px;
+    transition: width 0.2s;
+    &.active {
+      width: 256px;
+      transition: width 0.2s;
+    }
+  }
+    background-color: #000000;
+    @media (max-width: 425px) {
+    &.active {
+      width: 100vw;
+    }
+  }
 `;
-const BarIcon = styled.div`
-    margin-top: auto;
-    align-items: center;
-    font-size: 2rem;
-    color: #418FDE;
-    font-size: 3rem;
-`;
+
 const NavIcon = styled(Link)`
     margin-top: 1rem;
     display: flex;
@@ -32,18 +40,13 @@ const NavIcon = styled(Link)`
 const Sidebar: FC = () => {
     const [sidebar, setSidebar] = useState(false);
     const showSidebar = () => setSidebar(!sidebar);
-
     return (
         <>
-            <IconContext.Provider value={{ color: "#418FDE" }}>
-            </IconContext.Provider>
             <IconContext.Provider value={{ color: "#fff" }}>
                 <SidebarNav>
-                    <div>
-                        <NavIcon to="#" >
-                            <AiFillHome />
-                        </NavIcon>
-                    </div>
+                    <NavIcon to={"/overview"}>
+                        <AiFillHome />
+                    </NavIcon>
                 </SidebarNav>
             </IconContext.Provider>
         </>
