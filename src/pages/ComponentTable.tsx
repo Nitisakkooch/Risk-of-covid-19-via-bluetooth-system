@@ -34,9 +34,8 @@ export default function ComponentTable() {
   return <div style={{ width: "100vw" }} className={classes.table} aria-label="main table" >
     <MaterialTable
       columns={[
-        { title: "Telephon", field: "tel" },
+        { title: "Telephone", field: "tel" },
         { title: "Name", field: "name" },
-        { title: "MAC Address", field: "macName" },
         { title: "Student ID", field: "studentID", type: "numeric" },
         { title: "Room", field: "roomNum", },
         { title: "TimeStamp", field: "time", },
@@ -44,30 +43,35 @@ export default function ComponentTable() {
       data={[
         {
           tel: "0982236081",
-          name: "Mehmet",
-          macName: "00:00:5e:00:53:a1",
+          name: "Nakharin",
           studentID: "613040193-6",
           roomNum: "BE:AC:10:00:00:01",
-          time: "1642854514732",
+          time: "08/18/2022 09:11 pm",
         },
         {
           tel: "0982236081",
-          name: "Mehmet",
-          macName: "00:00:5e:00:53:a1",
-          studentID: "213040195-6",
+          name: "Nitisak",
+          studentID: "613040193-6",
           roomNum: "BE:AC:10:00:00:01",
-          time: "1642854514732",
+          time: "08/18/2022 09:11 pm",
+        },
+        {
+          tel: "0982236081",
+          name: "Mahaphumee",
+          studentID: "613040193-6",
+          roomNum: "BE:AC:10:00:00:01",
+          time: "08/18/2022 09:11 pm",
         },
         {
           tel: "0982236081",
           name: "Hummet",
-          macName: "00:00:5e:00:53:a1",
           studentID: "313040194-6",
           roomNum: "BA:EC:10:00:00:01",
-          time: "1642854514732",
+          time: "08/18/2022 09:11 pm",
         },
       ]}
       title="Name table of Covit 19 checklist"
     />
+    
   </div>
 }
