@@ -4,7 +4,6 @@ import styled from "styled-components";
 import { IconContext } from "react-icons";
 import { AiFillHome } from "react-icons/ai"
 import { useState } from "react";
-import * as colors from "../assets/colors.json";
 
 const SidebarNav = styled.div`
     border-radius: 0;

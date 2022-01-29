@@ -41,7 +41,7 @@ const App: FC = () => {
         <BarIcon >
           <RiVirusLine />
         </BarIcon>
-        System for tracking people at risk of Covid-19
+        System for tracking people at risk of Covid-19 at KKU
       </Nav>
       <Order>
         <BrowserRouter>
